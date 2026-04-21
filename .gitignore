@@ -1,0 +1,70 @@
+# =========================
+
+# Unity Generated Folders
+
+# =========================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# =========================
+
+# Visual Studio / VSCode
+
+# =========================
+
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# =========================
+
+# OS Files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Unity Cache / Metadata
+
+# =========================
+
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+# =========================
+
+# Build Results (IMPORTANT)
+
+# =========================
+
+webgl/
+*.apk
+*.aab
+*.exe
+*.ipa
+
+# =========================
+
+# Others
+
+# =========================
+
+*.log
+*.zip
