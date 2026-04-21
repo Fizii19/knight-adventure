@@ -84,8 +84,11 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+<<<<<<< HEAD
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -99,8 +102,11 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+<<<<<<< HEAD
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   textureAssetName: 
@@ -110,7 +116,10 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 0
@@ -132,7 +141,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 222
@@ -153,7 +165,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -174,7 +189,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -195,7 +213,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 41
@@ -216,7 +237,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 78
@@ -237,7 +261,10 @@ ScriptedImporter:
     pivot: {x: 0.75862074, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 156
@@ -258,7 +285,10 @@ ScriptedImporter:
     pivot: {x: 0.73333335, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -279,7 +309,10 @@ ScriptedImporter:
     pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -300,7 +333,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 78
@@ -321,7 +357,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 125
@@ -342,7 +381,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 40
@@ -363,7 +405,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 76
@@ -384,7 +429,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 78
@@ -405,7 +453,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 115
@@ -426,7 +477,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 114
@@ -447,7 +501,10 @@ ScriptedImporter:
     pivot: {x: 0.75862074, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 193
@@ -468,7 +525,10 @@ ScriptedImporter:
     pivot: {x: 0.73333335, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 42
@@ -489,7 +549,10 @@ ScriptedImporter:
     pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 52
@@ -510,7 +573,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 172
@@ -531,7 +597,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -552,7 +621,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 112
@@ -573,7 +645,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 148
@@ -594,7 +669,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 152
@@ -615,7 +693,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 189
@@ -636,7 +717,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 150
@@ -657,7 +741,10 @@ ScriptedImporter:
     pivot: {x: 0.75862074, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -678,7 +765,10 @@ ScriptedImporter:
     pivot: {x: 0.73333335, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 80
@@ -699,7 +789,10 @@ ScriptedImporter:
     pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 100
@@ -720,7 +813,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 51
@@ -741,7 +837,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 98
@@ -762,7 +861,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 184
@@ -783,7 +885,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 220
@@ -804,7 +909,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 4
@@ -825,7 +933,10 @@ ScriptedImporter:
     pivot: {x: 0.79310346, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 41
@@ -846,7 +957,10 @@ ScriptedImporter:
     pivot: {x: 0.7857143, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 186
@@ -867,7 +981,10 @@ ScriptedImporter:
     pivot: {x: 0.75862074, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 41
@@ -888,7 +1005,10 @@ ScriptedImporter:
     pivot: {x: 0.73333335, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 118
@@ -909,7 +1029,10 @@ ScriptedImporter:
     pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 148
@@ -930,7 +1053,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 145
@@ -951,7 +1077,10 @@ ScriptedImporter:
     pivot: {x: 0.5641026, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     customData: 
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
     rect:
       serializedVersion: 2
       x: 192
@@ -968,7 +1097,10 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 192, y: 146}
   spriteSheetImportData: []
+<<<<<<< HEAD
   tileSetImportData: []
+=======
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
   asepriteLayers:
   - layerIndex: 0
     uuid:
@@ -1343,10 +1475,14 @@ ScriptedImporter:
         height: 11
       spriteId: 1f13aee930d42a4489cd7e1376ada9d9
     linkedCells: []
+<<<<<<< HEAD
     tileCells: []
     tileSetIndex: 0
     parentIndex: -1
   tileSets: []
+=======
+    parentIndex: -1
+>>>>>>> 3ba2dc7d9db869f1067ce1796e3c7586e7b9a3ce
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []

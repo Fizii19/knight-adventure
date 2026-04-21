@@ -70,7 +70,6 @@ public class EnemyAI : MonoBehaviour
         // Hentikan fisika
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
-
         // Opsional: matikan collider
         GetComponent<Collider2D>().enabled = false;
 
