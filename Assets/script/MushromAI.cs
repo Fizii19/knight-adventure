@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class MushromAI : MonoBehaviour
 {
     public float chaseRange = 4f;
     public float moveSpeed = 2f;

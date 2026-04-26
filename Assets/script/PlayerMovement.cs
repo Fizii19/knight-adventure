@@ -94,7 +94,8 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyAI>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<SnailAI>()?.Knock();
+            enemy.GetComponent<MushromAI>()?.TakeDamage(attackDamage);
         }
     }
 

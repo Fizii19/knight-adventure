@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class FinishTrigger : MonoBehaviour
@@ -7,77 +6,79 @@ public class FinishTrigger : MonoBehaviour
     public AudioSource finishSound;
     public AudioClip finishSFX;
     public GameObject finishCanvas;
-    private Animator animChest;
-    private bool isFinished = false;
     public float delayTime = 6f;
 
-    private void Start()
+    private Animator animChest;
+    private bool isFinished = false;
+
+    void Start()
     {
         animChest = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isFinished && collision.CompareTag("Player"))
+        if (isFinished) return;
+        if (!collision.CompareTag("Player")) return;
+
+        // ===== CEK KUNCI =====
+        KeyManager km = FindFirstObjectByType<KeyManager>();
+        if (km == null || !km.HasEnoughKeys())
         {
-            // Cek syarat 1: Kunci
-            PlayerKey playerKey = collision.GetComponent<PlayerKey>();
-            if (playerKey == null || !playerKey.HasKey())
+            Debug.Log("Kunci belum cukup!");
+            return;
+        }
+
+        // ===== CEK ENEMY (LEVEL 3+) =====
+        if (GameManager.instance != null && GameManager.instance.currentLevel >= 3)
+        {
+            if (GameManager.instance.enemiesKilled < GameManager.instance.enemiesRequired)
             {
-                Debug.Log("Syarat belum terpenuhi: Kamu butuh kunci!");
+                Debug.Log("Enemy belum cukup dibantai!");
                 return;
             }
-
-            // Cek syarat 2: Bunuh Enemy (Hanya untuk Level 3 ke atas)
-            if (GameManager.instance != null && GameManager.instance.currentLevel >= 3)
-            {
-                if (GameManager.instance.enemiesKilled < GameManager.instance.enemiesRequired)
-                {
-                    Debug.Log("Syarat belum terpenuhi: Kamu harus mengalahkan enemy!");
-                    return;
-                }
-            }
-
-            isFinished = true;
-
-            if (BGMManager.instance != null)
-                BGMManager.instance.StopMusic();
-
-
-            // Fade out BGM
-            StartCoroutine(FadeOutBGM(0.5f));
-
-            // Play finish sound
-            if (finishSFX != null && finishSound != null)
-                finishSound.PlayOneShot(finishSFX);
-
-            // Disable movement
-            PlayerMovement pm = collision.GetComponent<PlayerMovement>();
-            if (pm != null) pm.enabled = false;
-
-            // Freeze player physics
-            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            }
-
-            // Force idle animation
-            Animator anim = collision.GetComponent<Animator>();
-            if (anim != null)
-            {
-                anim.SetFloat("Speed", 0f);
-                anim.SetBool("isJumping", false);
-            }
-
-                animChest.SetTrigger("Finish");
-
-            StartCoroutine(DelayFinish());
         }
+
+        isFinished = true;
+
+        // Stop BGM
+        if (BGMManager.instance != null)
+            BGMManager.instance.StopMusic();
+
+        StartCoroutine(FadeOutBGM(0.5f));
+
+        // Play SFX
+        if (finishSound != null && finishSFX != null)
+            finishSound.PlayOneShot(finishSFX);
+
+        // Disable movement
+        PlayerMovement pm = collision.GetComponent<PlayerMovement>();
+        if (pm != null) pm.enabled = false;
+
+        // Freeze player
+        Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+
+        // Force idle anim
+        Animator anim = collision.GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", 0f);
+            anim.SetBool("isJumping", false);
+        }
+
+        // Chest anim
+        if (animChest != null)
+            animChest.SetTrigger("Finish");
+
+        StartCoroutine(DelayFinish());
     }
 
-    private IEnumerator DelayFinish()
+    IEnumerator DelayFinish()
     {
         yield return new WaitForSeconds(delayTime);
 
@@ -85,9 +86,10 @@ public class FinishTrigger : MonoBehaviour
             finishCanvas.SetActive(true);
     }
 
-    private IEnumerator FadeOutBGM(float duration)
+    IEnumerator FadeOutBGM(float duration)
     {
         if (SceneBGM.instance == null) yield break;
+
         AudioSource bgm = SceneBGM.instance.GetComponent<AudioSource>();
         if (bgm == null) yield break;
 

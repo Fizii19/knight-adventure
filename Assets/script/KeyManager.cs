@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int keyCount = 0;
+    public int requiredKeys = 3; // set beda tiap level
+
+    public TextMeshProUGUI keyText;
+
     void Start()
     {
-        
+        UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddKey()
     {
-        
+        keyCount++;
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+        keyText.text = keyCount + " / " + requiredKeys;
+    }
+
+    public bool HasEnoughKeys()
+    {
+        return keyCount >= requiredKeys;
     }
 }

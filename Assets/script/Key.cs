@@ -11,8 +11,9 @@ public class KeyItem : MonoBehaviour
             PlayerKey playerKey = collision.GetComponent<PlayerKey>();
             if (playerKey != null)
             {
+                FindFirstObjectByType<KeyManager>().AddKey();
                 playerKey.AddKey(keyValue);
-                Destroy(gameObject); // key hilang setelah diambil
+                Destroy(gameObject);
             }
         }
     }
