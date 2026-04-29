@@ -36,31 +36,34 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
+{
+    if (isDead) return;
+
+    // ambil input dari keyboard ATAU mobile
+    float keyboardInput = Input.GetAxisRaw("Horizontal");
+    moveInput = (keyboardInput != 0) ? keyboardInput : MobileInput.move;
+
+    if (moveInput > 0) sprite.flipX = false;
+    else if (moveInput < 0) sprite.flipX = true;
+
+    anim.SetFloat("Speed", Mathf.Abs(moveInput));
+
+    // JUMP
+    if ((Input.GetKeyDown(KeyCode.Space) || MobileInput.jump) && isGrounded)
     {
-        if (isDead) return;
-
-        // ===== MOVEMENT =====
-        moveInput = Input.GetAxisRaw("Horizontal");
-
-        if (moveInput > 0) sprite.flipX = false;
-        else if (moveInput < 0) sprite.flipX = true;
-
-        anim.SetFloat("Speed", Mathf.Abs(moveInput));
-
-        // ===== JUMP =====
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            anim.SetBool("isJumping", true);
-            sfxSource.PlayOneShot(jumpSound);
-        }
-
-        // ===== ATTACK =====
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Attack();
-        }
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        anim.SetBool("isJumping", true);
+        sfxSource.PlayOneShot(jumpSound);
+        MobileInput.jump = false; // reset
     }
+
+    // ATTACK
+    if (Input.GetKeyDown(KeyCode.J) || MobileInput.attack)
+    {
+        Attack();
+        MobileInput.attack = false; // reset
+    }
+}
 
     void FixedUpdate()
     {
