@@ -6,12 +6,12 @@ public class MobileInput : MonoBehaviour
     public static bool jump;
     public static bool attack;
 
-    public void MoveLeft()
+    public void MoveLeftDown()
     {
         move = -1f;
     }
 
-    public void MoveRight()
+    public void MoveRightDown()
     {
         move = 1f;
     }
