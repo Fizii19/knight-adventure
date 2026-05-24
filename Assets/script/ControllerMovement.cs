@@ -3,8 +3,12 @@ using UnityEngine;
 public class MobileInput : MonoBehaviour
 {
     public static float move;
-    public static bool jump;
-    public static bool attack;
+    public static bool jumpPressed;
+    public static bool attackPressed;
+
+    // =========================
+    // MOVE
+    // =========================
 
     public void MoveLeftDown()
     {
@@ -21,13 +25,35 @@ public class MobileInput : MonoBehaviour
         move = 0f;
     }
 
+    // =========================
+    // JUMP
+    // =========================
+
     public void Jump()
     {
-        jump = true;
+        jumpPressed = true;
     }
+
+    public static bool GetJump()
+    {
+        bool pressed = jumpPressed;
+        jumpPressed = false;
+        return pressed;
+    }
+
+    // =========================
+    // ATTACK
+    // =========================
 
     public void Attack()
     {
-        attack = true;
+        attackPressed = true;
+    }
+
+    public static bool GetAttack()
+    {
+        bool pressed = attackPressed;
+        attackPressed = false;
+        return pressed;
     }
 }

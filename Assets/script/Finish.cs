@@ -8,6 +8,9 @@ public class FinishTrigger : MonoBehaviour
     public GameObject finishCanvas;
     public float delayTime = 6f;
 
+    [Header("Requirement")]
+    public bool requireKillEnemies = false;
+
     private Animator animChest;
     private bool isFinished = false;
 
@@ -29,16 +32,25 @@ public class FinishTrigger : MonoBehaviour
             return;
         }
 
-        // ===== CEK ENEMY (LEVEL 3+) =====
-        if (GameManager.instance != null && GameManager.instance.currentLevel >= 3)
+        // ===== CEK ENEMY =====
+        if (requireKillEnemies)
         {
-            if (GameManager.instance.enemiesKilled < GameManager.instance.enemiesRequired)
+            EnemyManager em = FindFirstObjectByType<EnemyManager>();
+
+            if (em == null)
             {
-                Debug.Log("Enemy belum cukup dibantai!");
+                Debug.LogError("EnemyManager tidak ditemukan!");
+                return;
+            }
+
+            if (!em.AllEnemiesDead())
+            {
+                Debug.Log("Enemy belum mati semua!");
                 return;
             }
         }
 
+        // ===== FINISH =====
         isFinished = true;
 
         // Stop BGM

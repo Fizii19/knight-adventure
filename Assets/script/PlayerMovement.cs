@@ -6,6 +6,11 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 20f;
 
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+
     [Header("Attack Settings")]
     public Transform attackPoint;
     public float attackRange = 0.5f;
@@ -21,73 +26,107 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
 
-    float moveInput;
+    private float moveInput;
     private bool isGrounded;
     private bool isDead = false;
 
     void Start()
     {
-        this.enabled = true ;
-        sfxSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+
+        if (sfxSource == null)
+            sfxSource = GetComponent<AudioSource>();
+
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void Update()
-{
-    if (isDead) return;
-
-    // ambil input dari keyboard ATAU mobile
-    float keyboardInput = Input.GetAxisRaw("Horizontal");
-    moveInput = (keyboardInput != 0) ? keyboardInput : MobileInput.move;
-
-    if (moveInput > 0) sprite.flipX = false;
-    else if (moveInput < 0) sprite.flipX = true;
-
-    anim.SetFloat("Speed", Mathf.Abs(moveInput));
-
-    // JUMP
-    if ((Input.GetKeyDown(KeyCode.Space) || MobileInput.jump) && isGrounded)
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        anim.SetBool("isJumping", true);
-        sfxSource.PlayOneShot(jumpSound);
-        MobileInput.jump = false; // reset
-    }
+        if (isDead) return;
 
-    // ATTACK
-    if (Input.GetKeyDown(KeyCode.J) || MobileInput.attack)
-    {
-        Attack();
-        MobileInput.attack = false; // reset
+        // =========================
+        // MOVE INPUT
+        // =========================
+
+        float keyboardInput = Input.GetAxisRaw("Horizontal");
+
+        moveInput = (keyboardInput != 0)
+            ? keyboardInput
+            : MobileInput.move;
+
+        // Flip character
+        if (moveInput > 0)
+            sprite.flipX = false;
+        else if (moveInput < 0)
+            sprite.flipX = true;
+
+        anim.SetFloat("Speed", Mathf.Abs(moveInput));
+
+        // =========================
+        // JUMP
+        // =========================
+
+        bool jumpPressed =
+            Input.GetKeyDown(KeyCode.Space) ||
+            MobileInput.GetJump();
+
+        if (jumpPressed && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                jumpForce
+            );
+
+            isGrounded = false;
+
+            anim.SetBool("isJumping", true);
+
+            if (jumpSound != null)
+                sfxSource.PlayOneShot(jumpSound);
+        }
+
+        // =========================
+        // ATTACK
+        // =========================
+
+        bool attackPressed =
+            Input.GetKeyDown(KeyCode.J) ||
+            MobileInput.GetAttack();
+
+        if (attackPressed)
+        {
+            Attack();
+        }
     }
-}
 
     void FixedUpdate()
     {
         if (isDead) return;
 
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(
+            moveInput * moveSpeed,
+            rb.linearVelocity.y
+        );
     }
 
     public void Revive()
     {
-        isDead = false ;
-        this.enabled = true;
+        isDead = false;
+        enabled = true;
     }
 
-    // ===== ATTACK =====
+    // =========================
+    // ATTACK
+    // =========================
+
     void Attack()
     {
         anim.SetTrigger("Attack");
 
-        // MAINKAN SUARA ATTACK
-        sfxSource.PlayOneShot(attackSound);
-
-        // STOP SUARA SETELAH ANIMASI SELESAI (opsional)
-        Invoke(nameof(StopAttackAudio), 0.3f);
+        if (attackSound != null)
+            sfxSource.PlayOneShot(attackSound);
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             attackPoint.position,
@@ -102,12 +141,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void StopAttackAudio()
-    {
-        sfxSource.Stop();
-    }
+    // =========================
+    // GROUND CHECK
+    // =========================
 
-    // ===== GROUND CHECK =====
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ground"))
@@ -125,10 +162,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // =========================
+    // HURT
+    // =========================
+
     public void PlayHurtAnimation()
     {
         anim.SetTrigger("Hurt");
     }
+
+    // =========================
+    // WATER DAMAGE
+    // =========================
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -138,8 +183,23 @@ public class PlayerMovement : MonoBehaviour
 
             if (hp != null)
             {
-                hp.TakeDamage(hp.currentHealth); // bikin hp langsung habis
+                hp.TakeDamage(hp.currentHealth);
             }
         }
+    }
+
+    // =========================
+    // DEBUG ATTACK RANGE
+    // =========================
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(
+            attackPoint.position,
+            attackRange
+        );
     }
 }
